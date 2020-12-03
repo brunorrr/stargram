@@ -1,0 +1,16 @@
+[
+    {
+        "name":"Get live feed by user",
+        "path":"/feed/*",
+        "method":"GET",
+        "request": {},
+        "response": {
+            "status": 200,
+            "body": {
+                "data": {
+
+                }
+            }
+        }
+    }
+]
