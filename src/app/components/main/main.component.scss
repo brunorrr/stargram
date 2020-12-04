@@ -1,11 +1,16 @@
 main {
     display: flex;
-}
+    max-width: 980px;
+    margin: auto;
+    
+    section.feed {
+        width: 70%;
+        margin-right: 20px;
+        background: rgb(210, 210, 248);
+    }
 
-main section {
-    width: 70%;
-}
-
-main aside {
-    width: 30%;
+    aside.lateral-nav {
+        width: 30%;
+        background: rgb(255, 164, 164);
+    }
 }

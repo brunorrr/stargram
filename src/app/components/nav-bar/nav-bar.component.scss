@@ -1,4 +1,13 @@
 :host {
     display: flex;
+    margin: auto;
+    width: 980px;
 }
 
+nav,header {
+    width: 33%;
+}
+
+nav .links-container {
+    float: right;
+}

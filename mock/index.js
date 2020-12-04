@@ -21,11 +21,19 @@
 
     mockGroups.forEach( group => {
         app.all(group[0].path, (req, res, next) => {
-            group.forEach(mock => {
-                if(req.query == mock.request.query){
-                    res.send(mock.response.body);
+            const selectedMock = group.filter(mock => {
+                if(mock.query != undefined) {
+                    if(!mock.query.every(
+                        query => req.query[query]
+                    )){
+                        return false;
+                    }
                 }
-            });
+                return true;
+            })[0];
+            if(selectedMock != null ) {
+                res.send(mock.response.body);
+            }
         });
     });
 })();

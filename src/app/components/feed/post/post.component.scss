@@ -1,0 +1,26 @@
+.author-header {
+    background: rgb(211, 137, 137);
+    padding: 10px 20px;
+
+    .author-photo {
+        display: inline-flex;
+        vertical-align: middle;
+    
+        img {
+            border-radius: 32px;
+            width: 32px;
+            height: 32px;
+            margin-right: 20px;
+        }
+    }
+
+    .author-name {
+        font-weight: bold;
+        font-size: 15px;
+    }
+}
+
+.media img {
+    width: 686px;
+    max-height: 686px;
+}
