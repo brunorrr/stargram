@@ -20,7 +20,16 @@
     }
 }
 
-.media img {
-    width: 686px;
-    max-height: 686px;
+.media {
+    display: flex;
+    img {
+        width: 686px;
+        max-height: 686px;
+        overflow: hidden;
+    }
+}
+
+.footer {
+    background: grey;
+    padding: 10px;
 }

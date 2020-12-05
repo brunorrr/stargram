@@ -11,6 +11,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { LateralNavComponent } from './components/lateral-nav/lateral-nav.component';
 import { PostComponent } from './components/feed/post/post.component';
+import { DescriptionComponent } from './components/feed/post/description/description.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PostComponent } from './components/feed/post/post.component';
     NavBarComponent,
     FeedComponent,
     LateralNavComponent,
-    PostComponent
+    PostComponent,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,
