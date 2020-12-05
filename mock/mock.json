@@ -1,9 +1,16 @@
 [
     {
         "name":"Get live feed by user",
-        "path":"/feed/*",
+        "path":"/feed/:userId",
         "method":"GET",
-        "request": {},
+        "request": {
+            "headers": {
+                "test": "true"
+            },
+            "query": {
+                "pageSize": 10
+            }
+        },
         "response": {
             "status": 200,
             "body": {
