@@ -3,20 +3,39 @@
         "name":"Get live feed by user",
         "path":"/feed/:userId",
         "method":"GET",
+        "description": "Gets the most recent item from user feed",
         "request": {
             "headers": {
-                "test": "true"
             },
             "query": {
-                "pageSize": 10
+                "limit": 1,
+                "offset": ""
             }
         },
         "response": {
             "status": 200,
             "body": {
-                "data": {
-
-                }
+                "data": [
+                    {
+                        "items": {
+                            "id":"000001",
+                            "_created": "2020-12-05T16:30:00Z",
+                            "description": "This is the Cat's Eye Nebula, it's the most beaultiful nebula in the universe because it has \"cat\" in the name."
+                        },
+                        "author": {
+                            "nickname":"arthur"
+                        },
+                        "pagination": {
+                            "offset": "",
+                            "limit": 1
+                        },
+                        "links": {
+                            "media": "https://hypescience.com/wp-content/uploads/2008/08/nebulosa-olho-de-gato-1024x768.jpg",
+                            "profileAvatar": "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg",
+                            "next": "/feed/:userId?limit=1&offset=000001"
+                        }
+                    }
+                ]
             }
         }
     }

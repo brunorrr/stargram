@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "mock": "npm start --prefix ./mock",
-    "start:mocked": "concurrently \"npm run start\" \"npm run mock\"",
+    "start:mocked": "concurrently \"ng serve --configuration=staging\" \"npm run mock\"",
     "build": "ng build --prod",
     "build:debug": "ng build",
     "test": "ng test",

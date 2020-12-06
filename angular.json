@@ -63,6 +63,14 @@
                   "maximumError": "4kb"
                 }
               ]
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
             }
           }
         },
@@ -74,6 +82,9 @@
           "configurations": {
             "production": {
               "browserTarget": "stargram:build:production"
+            },
+            "staging": {
+              "browserTarget": "stargram:build:staging"
             }
           }
         },
