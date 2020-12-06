@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FeedService } from 'src/app/services/feed.service';
 
 @Component({
   selector: 'app-feed',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private feedService: FeedService) { }
 
   ngOnInit(): void {
   }
