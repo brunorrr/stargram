@@ -26,29 +26,27 @@
             // For each group of mocks, find which mock fits the request, there must be at least one eligible option
             const selectedMock = group.filter(mock => {
                 // Checks if the candidate mock has the same method as the request
-                if(mock.method !== req.method) {
+                if(mock.method != req.method) {
                     return false;
                 }
                 // Checks if all candidate mock queries are equal to the request
-                if(mock.query !== undefined) {
-                    if(!Object.keys(mock.query).every(
-                        query => req.query[query] !== undefined
+                if(mock.request.query !== undefined) {
+                    if(!Object.keys(mock.request.query).every(
+                        query => req.query[query] == mock.request.query[query]
                     )){
                         return false;
                     }
                 }
                 // Checks if the candidate mock body is the same as the request body
-                if(mock.body !== undefined) {
-                    if(!Object.keys(mock.body).every(
-                        body => req.body[body] !== undefined
-                    )){
+                if(mock.request.body !== undefined) {
+                    if(req.body != mock.request.body){
                         return false;
                     }
                 }
                 // Checks if all candidate mock headers are equal to the request
-                if(mock.headers !== undefined) {
-                    if(!Object.keys(mock.headers).every(
-                        header => req.headers[header] !== undefined
+                if(mock.request.headers !== undefined) {
+                    if(!Object.keys(mock.request.headers).every(
+                        header => req.headers[header] == mock.request.headers[header]
                     )){
                         return false;
                     }
@@ -62,7 +60,7 @@
                     .send(selectedMock.response.body !== undefined ? selectedMock.response.body : null)
                     .end(); 
             } else {
-                res.sendStatus(404);
+                res.status(404).send('Mock not found.');
             }
             next();
         });
