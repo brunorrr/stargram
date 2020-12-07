@@ -12,6 +12,7 @@ import { FeedComponent } from './components/feed/feed.component';
 import { LateralNavComponent } from './components/lateral-nav/lateral-nav.component';
 import { PostComponent } from './components/feed/post/post.component';
 import { DescriptionComponent } from './components/feed/post/description/description.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DescriptionComponent } from './components/feed/post/description/descrip
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

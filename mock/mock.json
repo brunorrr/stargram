@@ -1,7 +1,7 @@
 [
     {
         "name": "Get live feed by user",
-        "path": "/feed/:userId",
+        "path": "/api/feed/:userId",
         "method": "GET",
         "request": {
             "headers": {},
@@ -18,11 +18,13 @@
                         "data": {
                             "id": "000001",
                             "created": "2020-12-05T16:30:00Z",
-                            "description": "This is the Cat's Eye Nebula, it's the most beaultiful nebula in the universe because it has \"cat\" in the name."
+                            "description": "This is the Cat's Eye Nebula, it's the most beaultiful nebula in the universe because it has \"cat\" in the name.",
+                            "media": "https://hypescience.com/wp-content/uploads/2008/08/nebulosa-olho-de-gato-1024x768.jpg"
                         },
                         "author": {
                             "id": "000001",
-                            "nickname": "arthur"
+                            "nickname": "arthur",
+                            "profileAvatar": "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg"
                         }
                     }
                 ],
@@ -31,8 +33,6 @@
                     "limit": 1
                 },
                 "links": {
-                    "media": "https://hypescience.com/wp-content/uploads/2008/08/nebulosa-olho-de-gato-1024x768.jpg",
-                    "profileAvatar": "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg",
                     "next": "/feed/:userId?limit=1&offset=000001"
                 }
             }

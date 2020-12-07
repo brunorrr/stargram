@@ -1,12 +1,12 @@
 <div class="author-header">
     <div class="author-photo">
-        <img src="https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg" alt="">
+        <img src="{{post.author.profileAvatar}}" alt="">
     </div>
-    <span class="author-name">Bruno</span>
+    <span class="author-name">{{post.author.nickname}}</span>
     <div class="etc"></div>
 </div>
 <div class="media">
-    <img src="https://hypescience.com/wp-content/uploads/2008/08/nebulosa-olho-de-gato-1024x768.jpg" alt="">
+    <img src="{{post.data.media}}" alt="">
 </div>
 <div class="footer">
     <div class="links-container">
