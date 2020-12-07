@@ -1,12 +1,12 @@
 [
     {
         "name": "Get live feed by user",
-        "path": "/api/feed/:userId",
+        "path": "/api/feed",
         "method": "GET",
         "request": {
             "headers": {},
             "query": {
-                "limit": 1,
+                "limit": 3,
                 "offset": ""
             }
         },
@@ -15,6 +15,7 @@
             "body": {
                 "data": [
                     {
+                        "type": "POST",
                         "data": {
                             "id": "000001",
                             "created": "2020-12-05T16:30:00Z",
@@ -26,14 +27,31 @@
                             "nickname": "arthur",
                             "profileAvatar": "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg"
                         }
+                    },
+                    {
+                        "type": "POST",
+                        "data": {
+                            "id": "000003",
+                            "created": "2020-12-07T23:30:00Z",
+                            "description": "Look at the moon, isn't it beaultiful? You are even more.",
+                            "media": "https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg"
+                        },
+                        "author": {
+                            "id": "000001",
+                            "nickname": "arthur",
+                            "profileAvatar": "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg"
+                        }
+                    },
+                    {
+                        "type": "UPDATED"
                     }
                 ],
                 "pagination": {
                     "offset": "",
-                    "limit": 1
+                    "limit": 3
                 },
                 "links": {
-                    "next": "/feed/:userId?limit=1&offset=000001"
+                    "next": "/feed/:userId?limit=3&offset=000003"
                 }
             }
         }

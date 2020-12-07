@@ -15,6 +15,6 @@
         <a href="">Share</a>
     </div>
     <div class="post-text">
-        <app-description></app-description>
+        <app-description [authorName]="post.author.nickname" [description]="post.data.description"></app-description>
     </div>
 </div>

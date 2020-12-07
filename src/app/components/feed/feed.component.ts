@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/models/post';
+import { PostType } from 'src/app/models/post-type.enum';
 import { FeedService } from 'src/app/services/feed.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class FeedComponent implements OnInit {
   posts: Post[] = [];
 
   offSet: string = '';
-  readonly feedSize: number = 1;
+  readonly feedSize: number = 3;
+  readonly postType = PostType;
 
   constructor(private feedService: FeedService) { }
 

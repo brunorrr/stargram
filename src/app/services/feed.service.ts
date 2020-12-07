@@ -15,7 +15,7 @@ export class FeedService {
     constructor(private httpClient: HttpClient) {}
 
     feedFeed(offset: string, limit: number): Observable<Post[]> {
-        return this.httpClient.get<PaginableReturn<Post[]>>(`${environment.backendUrl}api/feed/2`,
+        return this.httpClient.get<PaginableReturn<Post[]>>(`${environment.backendUrl}api/feed`,
         {
             params: {
                 offset: offset,
